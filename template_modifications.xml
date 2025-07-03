@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications addon_id="Tashma/Linker">
+  <modification>
+    <modification_key>insert_tashma_script</modification_key>
+    <description>Insert Tashma Linker script</description>
+    <template>PAGE_CONTAINER</template>
+    <type>regex</type>
+    <action>str_replace</action>
+    <find><![CDATA[</body>]]></find>
+    <replace><![CDATA[
+<script>
+(function () {
+  const script = document.createElement('script');
+  script.src = 'https://tashma.jewishoffice.co.il/linker.js';
+  script.charset = 'utf-8';
+  script.onload = function () {
+    if (typeof tashma !== 'undefined' && typeof tashma.link === 'function') {
+      tashma.link();
+    }
+  };
+  document.body.appendChild(script);
+})();
+</script>
+</body>]]></replace>
+    <enabled>1</enabled>
+  </modification>
+</template_modifications>

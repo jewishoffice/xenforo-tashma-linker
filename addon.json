@@ -1,0 +1,9 @@
+{
+  "legacy_addon_id": "",
+  "title": "Tashma Linker",
+  "description": "מוסיף קישורים אוטומטיים למקורות תורניים בכל הדפים בפורום.",
+  "version_id": 1000010,
+  "version_string": "1.0.0",
+  "dev": "Jewish Office",
+  "addon_id": "Tashma/Linker"
+}
